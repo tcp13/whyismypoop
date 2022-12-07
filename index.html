@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- metadata -->
+		<title>Why is My Poop...</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- seo -->
+		<meta name="title" content="Why is My Poop...">
+		<meta name="description" content="Poop is a treasure trove of health information! “Why is My Poop…” is a simple reference tool for understanding abnormal poop, including when to be concerned or ask a doctor.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://whyismypoop.com/">
+		<meta property="og:title" content="Why is My Poop...">
+		<meta property="og:description" content="Poop is a treasure trove of health information! “Why is My Poop…” is a simple reference tool for understanding abnormal poop, including when to be concerned or ask a doctor.">
+		<meta property="og:image" content="poop-thumbnail.png">
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://whyismypoop.com/">
+		<meta property="twitter:title" content="Why is My Poop...">
+		<meta property="twitter:description" content="Poop is a treasure trove of health information! “Why is My Poop…” is a simple reference tool for understanding abnormal poop, including when to be concerned or ask a doctor.">
+		<meta property="twitter:image" content="poop-thumbnail.png">
+
+		<!-- styles -->
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+		<link rel="manifest" href="favicons/site.webmanifest">
+		
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="header">
+				<!--<img src="poop.png" alt="" style="width:3.157rem;padding-right:15px;vertical-align: -45%;">-->
+				<h1 style="text-align:center;">Why is My Poop...</h1>
+			</div>
+			
+			<div class="carousel six-col" style="margin-top:1.5rem;">
+				<button onclick="loadContent('hard-and-separate')"><img alt="" src="icons/beans.png"><br>Hard & Separate</button>
+				<button onclick="loadContent('hard-and-cracked')"><img alt="" src="icons/caterpillar.png"><br>Hard & Cracked</button>
+				<button onclick="loadContent('soft-and-smooth')"><img alt="" src="icons/snake.png"><br>Soft & Smooth</button>
+				<button onclick="loadContent('soft-and-blobby')"><img alt="" src="icons/amoeba.png"><br>Soft & Blobby</button>
+				<button onclick="loadContent('mushy-and-ragged')"><img alt="" src="icons/cloud.png"><br>Mushy & Ragged</button>
+				<button onclick="loadContent('watery-and-runny')"><img alt="" src="icons/drops.png"><br>Watery & Runny</button>
+			</div>
+
+			<div class="carousel seven-col" style="margin-bottom:1.5rem;">
+				<button onclick="loadContent('black')"><img alt="" src="icons/black.png"><br>Black</button>
+				<button onclick="loadContent('brown')"><img alt="" src="icons/brown.png"><br>Brown</button>
+				<button onclick="loadContent('red')"><img alt="" src="icons/red.png"><br>Red</button>
+				<button onclick="loadContent('orange')"><img alt="" src="icons/orange.png"><br>Orange</button>
+				<button onclick="loadContent('yellow')"><img alt="" src="icons/yellow.png"><br>Yellow</button>
+				<button onclick="loadContent('green')"><img alt="" src="icons/green.png"><br>Green</button>
+				<button onclick="loadContent('white')"><img alt="" src="icons/white.png"><br>White</button>
+			</div>
+
+			<!--
+			<div class="carousel eight-col" style="margin-bottom:1.5rem;">
+				<button onclick="loadContent('floating')"><img alt="" src="icons/buoy.png"><br>Floating</button>
+				<button onclick="loadContent('sinking')"><img alt="" src="icons/anchor.png"><br>Sinking</button>
+				<button onclick="loadContent('painful')"><img alt="" src="icons/pain.png"><br>Painful</button>
+				<button onclick="loadContent('smelly')"><img alt="" src="icons/biohazard.png"><br>Smelly</button>
+				<button onclick="loadContent('greasy')"><img alt="" src="icons/oil.png"><br>Greasy</button>
+				<button onclick="loadContent('stringy')"><img alt="" src="icons/thread.png"><br>Stringy</button>
+				<button onclick="loadContent('so often')"><img alt="" src="icons/hourglass-empty.png"><br>So Often</button>
+				<button onclick="loadContent('infrequent')"><img alt="" src="icons/hourglass-full.png"><br>Infrequent</button>
+			</div>
+			-->
+
+			<!-- modal -->
+			<div id="modal" class="modal modal-hidden" onclick="toggleModalVisibility();">
+				<div class="modal-content">
+					<button aria-label="close popup" type="button" class="close-modal" onclick="toggleModalVisibility();">&times;</button>
+					<img id="modal-icon" alt="" src="">
+					<h2 id="modal-title"></h2>
+					<p id="modal-text"></p>
+				</div>
+			</div>
+
+		</div>
+	</body>
+	
+	<footer>
+		<div class="container">
+			<p class="footer-text"><strong>WiMP v1.0</strong><br>Tyler Puckett © 2022<br><a href="/terms.html">Terms of Use</a> | <a href="https://tyler-puckett.com/#page-section-627c16fe9e1aa7738a176d15" target="_blank">Feedback</a></p>
+			<div id="socialShare">
+				<h2>Share:</h2>
+				<a aria-label="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.whyismypoop.com" target="_blank"><img src="icons/facebook.svg"></a>
+				<a aria-label="Twitter" href="https://twitter.com/intent/tweet?text=Poop%20is%20a%20treasure%20trove%20of%20health%20information!%20%E2%80%9CWhy%20is%20My%20Poop%E2%80%A6%E2%80%9D%20is%20a%20simple%20reference%20tool%20for%20understanding%20abnormal%20poop,%20including%20when%20to%20be%20concerned%20or%20ask%20a%20doctor%3A%20https%3A//www.whyismypoop.com" target="_blank"><img src="icons/twitter.svg"></a>
+				<a aria-label="LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.whyismypoop.com" target="_blank"><img src="icons/linkedin.svg"></a>
+			</div>
+		</div>
+		<br><br>
+
+		<!-- scripts -->
+		<script src="script.js"></script>
+	</footer>
+</html>
